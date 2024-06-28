@@ -139,13 +139,3 @@ $(window).on('load', function () {
   
     TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-  
-
-//どないして持ってくるん？ <じゃあ考えるか
-var text1 = "ここに1番目に一致率の高いやつ";
-var text1 = "ここに2番目に一致率の高いやつ";
-var text1 = "ここに3番目に一致率の高いやつ";
-var text1 = "ここに4番目に一致率の高いやつ";
-var text1 = "ここに5番目に一致率の高いやつ";
-
-document.getElementById("variableOutput").innerText = text1
