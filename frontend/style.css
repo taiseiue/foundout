@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+}
+
+a{
+  color: #333;
+}
+
+/*========= particle js を描画するエリア設定 ===============*/
+
+html,body{
+  height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+  position:fixed;/*描画固定*/
+  z-index:-1;/*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color:#f3f3f3;/*背景色*/
+}
+
+/*#wrapper{
+  position: relative;描画を#particles-jsよりも上にするためposition:relative;を指定
+  z-index: 1;z-indexの数字を大きくすることで描画を#particles-jsよりも上に
+  width:100%;
+  height: 100%;
+}*/
+
+body{
+    background:#f3f3f3;
+  }
+
+/*========= countアニメーションの書式等 ===============*/
+/*
+.box{
+    max-width:500px;
+    width: auto;
+    margin:auto;
+    padding: 20px;
+    background:#f3f3f3;
+    text-align:center;
+}
+
+.count-size{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #252CBC;
+}
+*/
+/*========= レイアウト ===============*/
+
+p{
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    font-size: 1.5rem;
+    letter-spacing: .5em;
+        word-break: break-all;
+}
+
+.TextTyping{
+    text-align: center;
+}
+
+/*========= タイピング ===============*/
+
+.TextTyping span {
+display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after{
+    content:"|";
+    animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime{
+    from{opacity:0}
+    to{opacity:1}
+}
