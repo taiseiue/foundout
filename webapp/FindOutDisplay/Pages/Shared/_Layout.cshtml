@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+            <title>found it!</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+            <!--<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-8/css/reset.css">-->
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+            <meta http-equiv="refresh" content="3; URL=/">
+        </head>
+    <body>
+        <div id="particles-js"></div>
+        <!--<div id="wrapper">この中にコンテンツが入る</div>--><!--body内のアニメーションを表示させたい場所にHTMLを記載-->
+
+        <!--<div id="box1" class="box">
+            <p>Discordの単語<br><span class="count-up count-size">100</span>%</p>
+        </div>-->
+
+        @RenderBody()
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><!--particles.jsというライブラリのオンラインジェネレーターを利用して描画を行い、HTML内のdivタグの背景に指定する-->
+        <script src="~/js/@ViewData["JS"]" asp-append-version="true"></script>
+    </body>
+</html>
