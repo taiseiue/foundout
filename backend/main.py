@@ -47,6 +47,7 @@ async def OnReceived(message):
         nTuple = ((await utils.llm.GetNearWords(master_word))[0])
         master_Norm = nTuple[1]
         words.clear()
+        utils.console.SendText("RESET")
         await utils.mydiscord.print_log(f"この単語をゴールの単語に決定しました。\n目標Norm={master_Norm}")
         return
     if master_word and word == "ヒント":
@@ -64,6 +65,7 @@ async def OnReceived(message):
             await message.reply("未知の単語です...")
         if norm >= 0.999999:
             master_word = ""
+            utils.console.SendText("ANSWER")
             await utils.mydiscord.print_log("正解しました。ゴールの単語を再設定してください。")
 
 utils.mydiscord.Inited = OnInited

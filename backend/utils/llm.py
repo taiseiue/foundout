@@ -15,7 +15,7 @@ async def Norm(wordA, wordB):
     try:
         result.Norm =  Model.similarity(wordA,wordB)
     except:
-        result.Norm =  -1
+        result.Norm =  0
     return result
 
 async def GetNearWords(word):
@@ -28,6 +28,6 @@ class Word:
     Norm = 0
 
     def __lt__(self, other):
-        return self.Norm < other.Norm
+        return self.Norm > other.Norm
     def __str__(self) -> str:
         return self.Word

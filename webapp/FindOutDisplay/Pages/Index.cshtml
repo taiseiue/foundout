@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["JS"] = LLMManager.CelebrateMode ? "celebrate.js" : "normal.js";
+}
+        <p></p>
+        <h1 style="text-align: center;">@(LLMManager.Header)</h1>
+        <p><span class="TextTyping">@(LLMManager.Word1)</span></p>
+        <p class="TextTyping">@(LLMManager.Word1)</p>
+        <p class="TextTyping">@(LLMManager.Word2)</p>
+        <p class="TextTyping">@(LLMManager.Word3)</p>
+        <p class="TextTyping">@(LLMManager.Word4)</p>
+        <p class="TextTyping">@(LLMManager.Word5)</p>
