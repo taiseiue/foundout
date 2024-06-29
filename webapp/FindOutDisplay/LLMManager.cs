@@ -20,7 +20,7 @@ public class LLMManager
 
         //ウィンドウを表示しないようにする
         p.StartInfo.CreateNoWindow = true;
-        p.StartInfo.WorkingDirectory = "/Users/taiseiue/Documents/source/foundout/backend/";
+        p.StartInfo.WorkingDirectory = "llm";
         //コマンドラインを指定（"/c"は実行後閉じるために必要）
         p.StartInfo.Arguments = @"-u main.py";
         Console.WriteLine(p.StartInfo.Arguments);
