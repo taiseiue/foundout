@@ -37,6 +37,7 @@ public class LLMManager
     {
         string str = e?.Data?.ToString();
         str ??= "";
+        Console.WriteLine(str);
         if(str.StartsWith("##") && str.EndsWith("##"))
         {
             if(str == "##RESET##")
