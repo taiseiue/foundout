@@ -22,7 +22,6 @@ async def GetNearWords(word):
     return Model.most_similar(word)
 
 
-
 class Word:
     Word = ""
     Norm = 0
