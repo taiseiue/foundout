@@ -1,6 +1,7 @@
 import utils.console
 import utils.llm
 import utils.mydiscord
+import random
 import os
 from dotenv import load_dotenv
 
@@ -49,9 +50,12 @@ async def OnReceived(message):
         words.clear()
         utils.console.SendText("RESET")
         await utils.mydiscord.print_log(f"この単語をゴールの単語に決定しました。\n目標Norm={master_Norm}")
+        hints = await utils.llm.GetNearWords(master_word)
+        if len(hints) > 3:
+            i = random.randint(2, len(hints) - 3)
+            await utils.mydiscord.print_log(f"ヒントは「{(hints[i])[0]}」です。({i}番目)")
+            utils.console.SendText(f"{(hints[i])[0]}")
         return
-    if master_word and word == "ヒント":
-        await message.reply(f"ヒント:\n```{await utils.llm.GetNearWords(master_word)}```")
     if master_word:
         wordObj = await utils.llm.Norm(master_word, word)
         words.append(wordObj)
